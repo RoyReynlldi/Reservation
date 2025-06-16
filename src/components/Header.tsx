@@ -19,6 +19,16 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const handlePhoneClick = () => {
+    const phoneNumber = '082315006331';
+    window.open(`https://wa.me/${phoneNumber}`, '_blank');
+  };
+
+  const handleLocationClick = () => {
+    const contactSection = document.getElementById('contact');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-800 shadow-lg' : 'bg-transparent'
@@ -32,31 +42,31 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button 
+            <button
               onClick={() => scrollToSection('home')}
               className="text-white hover:text-yellow-400 transition-colors duration-300"
             >
               Home
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('about')}
               className="text-white hover:text-yellow-400 transition-colors duration-300"
             >
               About
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('menu')}
               className="text-white hover:text-yellow-400 transition-colors duration-300"
             >
               Menu
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('reservations')}
               className="text-white hover:text-yellow-400 transition-colors duration-300"
             >
               Reservations
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('contact')}
               className="text-white hover:text-yellow-400 transition-colors duration-300"
             >
@@ -66,11 +76,11 @@ const Header = () => {
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4 text-white">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2" onClick={handlePhoneClick}>
               <Phone size={16} />
               <span className="text-sm">082315006331</span>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2" onClick={handleLocationClick}>
               <MapPin size={16} />
               <span className="text-sm">Rancaekek Kencana</span>
             </div>
@@ -89,31 +99,31 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-slate-800 border-t border-slate-700">
             <nav className="py-4 space-y-2">
-              <button 
+              <button
                 onClick={() => scrollToSection('home')}
                 className="block w-full text-left px-4 py-2 text-white hover:text-yellow-400 transition-colors"
               >
                 Home
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('about')}
                 className="block w-full text-left px-4 py-2 text-white hover:text-yellow-400 transition-colors"
               >
                 About
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('menu')}
                 className="block w-full text-left px-4 py-2 text-white hover:text-yellow-400 transition-colors"
               >
                 Menu
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('reservations')}
                 className="block w-full text-left px-4 py-2 text-white hover:text-yellow-400 transition-colors"
               >
                 Reservations
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="block w-full text-left px-4 py-2 text-white hover:text-yellow-400 transition-colors"
               >
