@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 import { useMenu } from '../hooks/useMenu';
+import qrImage from '../assets/qr.png'; // Import gambar QR
 
 const Menu = () => {
   const { menuItems, loading, error, getMenuByCategory } = useMenu();
   const [activeCategory, setActiveCategory] = useState<'starters' | 'mains' | 'desserts' | 'drinks'>('starters');
 
   const categories = [
-    { id: 'starters' as const, name: 'Starters' },
-    { id: 'mains' as const, name: 'Main Courses' },
-    { id: 'desserts' as const, name: 'Desserts' },
-    { id: 'drinks' as const, name: 'Beverages' }
+    { id: 'starters' as const, name: 'Menu Pembuka' },
+    { id: 'mains' as const, name: 'Menu Utama' },
+    { id: 'desserts' as const, name: 'Makanan Penutup' },
+    { id: 'drinks' as const, name: 'Minuman' }
   ];
 
   if (loading) {
     return (
-      <section id="menu\" className="py-20 bg-slate-50">
+      <section id="menu" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -55,12 +56,11 @@ const Menu = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-              Our Menu
+              Menu Cak Jo!
             </h2>
             <div className="w-24 h-1 bg-yellow-500 mx-auto mb-8"></div>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Discover our carefully curated menu featuring seasonal ingredients 
-              and innovative culinary techniques
+              Pilih Menu Favorit Anda dari Berbagai Kategori Kami!
             </p>
           </div>
 
@@ -93,7 +93,7 @@ const Menu = () => {
                     {item.name}
                   </h3>
                   <span className="text-yellow-600 font-bold text-lg">
-                    ${item.price.toFixed(2)}
+                    Rp.{item.price.toFixed()}
                   </span>
                 </div>
                 <p className="text-slate-600 leading-relaxed">
@@ -105,11 +105,19 @@ const Menu = () => {
 
           <div className="text-center mt-12">
             <p className="text-slate-600 mb-6">
-              Please inform us of any dietary restrictions or allergies
+              Lihat lebih banyak pilihan dan spesial kami di menu lengkap!
             </p>
-            <button className="bg-slate-800 text-white px-8 py-3 rounded-lg hover:bg-slate-700 transition-colors duration-300">
-              Download Full Menu
-            </button>
+            <p>
+              <span className="text-yellow-600 font-bold">Scan Atau Click QR Code</span> untuk melihat menu lengkap kami.
+            </p>
+
+            {/* Ganti tombol dengan gambar QR */}
+            <img
+              src={qrImage}  // Menampilkan gambar QR
+              alt="QR Code"
+               className="mx-auto cursor-pointer rounded-lg w-32"  // Menyesuaikan ukuran gambar
+              onClick={() => window.open('https://drive.google.com/drive/folders/1DeH0lcqsF9LWGhcQfCiuqZsbZ6NQFMxS', '_blank')}  // Link jika di klik
+            />
           </div>
         </div>
       </div>

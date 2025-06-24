@@ -37,7 +37,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="text-2xl font-bold text-white">
-            Savoria
+            Cak Jo
           </div>
 
           {/* Desktop Navigation */}
@@ -78,11 +78,11 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-4 text-white">
             <div className="flex items-center space-x-2" onClick={handlePhoneClick}>
               <Phone size={16} />
-              <span className="text-sm">082315006331</span>
+              <span className="text-sm">085133060332</span>
             </div>
             <div className="flex items-center space-x-2" onClick={handleLocationClick}>
               <MapPin size={16} />
-              <span className="text-sm">Rancaekek Kencana</span>
+              <span className="text-sm">jl. kh. Agus Salim</span>
             </div>
           </div>
 

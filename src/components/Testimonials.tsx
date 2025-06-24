@@ -1,28 +1,31 @@
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
+import pfpImage from '../assets/pfp.webp';  // Import gambar lokal
+import wpfpImage from '../assets/gpfp.png';  // Import gambar lokal
+import ppfpImage from '../assets/ppfp.jpg';  // Import gambar lokal
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Food Critic",
-      content: "Savoria delivers an extraordinary culinary journey that exceeds every expectation. The attention to detail and flavor profiles are simply magnificent.",
+      name: "AIM TV",
+      role: "",
+      content: "Dimsum kuahnya mantap, wajib coba, pancongnya ga bikin eneg..",
       rating: 5,
-      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
+      image: wpfpImage  // Menggunakan gambar lokal
     },
     {
-      name: "Michael Chen",
-      role: "Regular Guest",
-      content: "Every visit to Savoria is a celebration. The service is impeccable, the atmosphere is perfect, and the food is consistently outstanding.",
+      name: "Aku Siapa",
+      role: "",
+      content: "10/10 makanannya enak2 bgttt kalian wajib ke sni pkonya🤩🫵🏻✨",
       rating: 5,
-      image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
+      image: pfpImage  // Menggunakan gambar lokal
     },
     {
-      name: "Emma Rodriguez",
-      role: "Event Planner",
-      content: "We've hosted several corporate events at Savoria, and they never disappoint. The private dining experience is unmatched in the city.",
+      name: "Risma Shakii",
+      role: "",
+      content: "Beberapa foto aja cukup mewakili nikmatnya nongkrong d waroeng cak jo. Kalo lu mau tau, dateng aja. Ga bakal nyesel sumpah",
       rating: 5,
-      image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
+      image: ppfpImage  // Menggunakan gambar lokal
     }
   ];
 
@@ -32,12 +35,11 @@ const Testimonials = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              What Our Guests Say
+              Apa yang Dikatakan Tamu Kami  
             </h2>
             <div className="w-24 h-1 bg-yellow-500 mx-auto mb-8"></div>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our valued guests 
-              have to say about their experiences at Savoria.
+              Jangan hanya percaya pada kata-kata kami. Inilah yang dikatakan oleh tamu-tamu kami tentang pengalaman mereka di cak joe.
             </p>
           </div>
 
@@ -58,7 +60,7 @@ const Testimonials = () => {
 
                 <div className="flex items-center">
                   <img 
-                    src={testimonial.image}
+                    src={testimonial.image}  // Menggunakan gambar lokal
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full object-cover mr-4"
                   />
@@ -82,8 +84,8 @@ const Testimonials = () => {
                   <Star key={i} className="w-6 h-6 fill-current" />
                 ))}
               </div>
-              <span className="text-white text-lg font-semibold">4.9/5</span>
-              <span className="text-slate-300">from 847+ reviews</span>
+              <span className="text-white text-lg font-semibold">4.4/5</span>
+              <span className="text-slate-300">dari 117+ reviews</span>
             </div>
           </div>
         </div>

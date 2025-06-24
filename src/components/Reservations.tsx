@@ -78,7 +78,7 @@ const Reservations = () => {
                 Reservation Confirmed!
               </h2>
               <p className="text-lg text-slate-600 mb-6">
-                Thank you for choosing Savoria. Your reservation has been successfully saved 
+                Thank you for choosing cak jo. Your reservation has been successfully saved 
                 to our system and you should receive a confirmation email shortly.
               </p>
               <p className="text-slate-600">
@@ -97,12 +97,12 @@ const Reservations = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-              Make a Reservation
+               Booking Sekarang!
             </h2>
             <div className="w-24 h-1 bg-yellow-500 mx-auto mb-8"></div>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Reserve your table for an unforgettable culinary experience. 
-              We recommend booking in advance to secure your preferred time.
+              Pesan meja Anda untuk pengalaman kuliner yang tak terlupakan. 
+              Kami menyarankan Anda untuk melakukan reservasi terlebih dahulu untuk mendapatkan waktu yang Anda inginkan.
             </p>
           </div>
 
@@ -121,7 +121,7 @@ const Reservations = () => {
                   <div>
                     <label className="block text-slate-700 font-semibold mb-2">
                       <Calendar className="inline w-4 h-4 mr-2" />
-                      Date
+                      Tanggal pemesanan
                     </label>
                     <input
                       type="date"
@@ -136,7 +136,7 @@ const Reservations = () => {
                   <div>
                     <label className="block text-slate-700 font-semibold mb-2">
                       <Clock className="inline w-4 h-4 mr-2" />
-                      Time
+                      Waktu Pemesanan
                     </label>
                     <select
                       name="reservation_time"
@@ -156,7 +156,7 @@ const Reservations = () => {
                 <div>
                   <label className="block text-slate-700 font-semibold mb-2">
                     <Users className="inline w-4 h-4 mr-2" />
-                    Number of Guests
+                    Jumlah Tamu
                   </label>
                   <select
                     name="party_size"
@@ -173,7 +173,7 @@ const Reservations = () => {
                 <div>
                   <label className="block text-slate-700 font-semibold mb-2">
                     <User className="inline w-4 h-4 mr-2" />
-                    Full Name
+                    Nama
                   </label>
                   <input
                     type="text"
@@ -190,7 +190,7 @@ const Reservations = () => {
                   <div>
                     <label className="block text-slate-700 font-semibold mb-2">
                       <Phone className="inline w-4 h-4 mr-2" />
-                      Phone Number
+                      Nomor Telepon
                     </label>
                     <input
                       type="tel"
@@ -199,13 +199,13 @@ const Reservations = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                      placeholder="(555) 123-4567"
+                      placeholder="08XXXXXXXX"
                     />
                   </div>
                   <div>
                     <label className="block text-slate-700 font-semibold mb-2">
                       <Mail className="inline w-4 h-4 mr-2" />
-                      Email Address
+                      Alamat Email
                     </label>
                     <input
                       type="email"
@@ -229,16 +229,17 @@ const Reservations = () => {
                     onChange={handleInputChange}
                     rows={3}
                     className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                    placeholder="Dietary restrictions, special occasions, seating preferences..."
+                    placeholder="Meja nya di satuin min!, Minta Asbak Min..."
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
+                  onClick={() => window.open('https://wa.me/085133060332', '_blank')}
                   className="w-full bg-yellow-500 hover:bg-yellow-400 disabled:bg-yellow-300 disabled:cursor-not-allowed text-black font-semibold py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
-                  {isSubmitting ? 'Creating Reservation...' : 'Confirm Reservation'}
+                  {isSubmitting ? 'Creating Reservation...' : 'Konfirmasi Pemesanan'}
                 </button>
               </form>
             </div>
@@ -247,45 +248,43 @@ const Reservations = () => {
             <div className="space-y-8">
               <div className="bg-slate-50 rounded-lg p-8">
                 <h3 className="text-2xl font-bold text-slate-800 mb-6">
-                  Reservation Information
+                  Informasi Booking
                 </h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-slate-700 mb-2">Operating Hours</h4>
+                    <h4 className="font-semibold text-slate-700 mb-2">Jam Operasional</h4>
                     <div className="text-slate-600 space-y-1">
-                      <p>Monday - Thursday: 5:00 PM - 10:00 PM</p>
-                      <p>Friday - Saturday: 5:00 PM - 11:00 PM</p>
-                      <p>Sunday: 4:00 PM - 9:00 PM</p>
+                      <p>Selasa : 15.00  - 00.30 </p>
+                      <p>Rabu   : 15.00  - 00.30 </p>
+                      <p>Kamis  : 15.00  - 00.30 </p>
+                      <p>Jumat  : 15.00  - 00.30 </p>
+                      <p>Sabtu  : 15.00  - 00.30 </p>
+                      <p>Minggu  : 15.00  - 00.30 </p>
+                      <p>Senin  : Tutup </p>
                     </div>
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-700 mb-2">Policies</h4>
                     <div className="text-slate-600 space-y-1 text-sm">
-                      <p>• Reservations recommended, especially weekends</p>
-                      <p>• 15-minute grace period for arrival</p>
-                      <p>• Cancellations accepted up to 2 hours before</p>
-                      <p>• Smart casual dress code preferred</p>
+                      <p>• Melakukan pembatalan, uang dp akan hangus</p>
+                      <p>• setelah mengisi form. konfirmasi pembayaran ke whatsapp</p>
                     </div>
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-700 mb-2">Contact</h4>
                     <div className="text-slate-600 space-y-1">
-                      <p>Phone: (555) 123-4567</p>
-                      <p>Email: reservations@savoria.com</p>
+                      <p>Phone: 085133060332</p>
+                      <p>Email: Tansucakjo@gmail.com</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-lg p-8 text-white">
-                <h3 className="text-xl font-bold mb-4">Private Events</h3>
+                <h3 className="text-xl font-bold mb-4">Event Spesial</h3>
                 <p className="mb-4 text-slate-200">
-                  Planning a special celebration? Our private dining room 
-                  accommodates up to 20 guests for intimate gatherings.
+                  Akan ada event sarapan pagi di cak jo di hari sabtu minggu.
                 </p>
-                <button className="bg-yellow-500 text-black px-6 py-2 rounded-lg hover:bg-yellow-400 transition-colors">
-                  Inquire About Events
-                </button>
               </div>
             </div>
           </div>
