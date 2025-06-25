@@ -39,7 +39,7 @@ const Testimonials = () => {
             </h2>
             <div className="w-24 h-1 bg-yellow-500 mx-auto mb-8"></div>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-              Jangan hanya percaya pada kata-kata kami. Inilah yang dikatakan oleh tamu-tamu kami tentang pengalaman mereka di cak joe.
+              Jangan hanya percaya pada kata-kata kami. Inilah yang dikatakan oleh tamu-tamu kami tentang pengalaman mereka di cak jo.
             </p>
           </div>
 

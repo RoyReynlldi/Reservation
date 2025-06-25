@@ -12,7 +12,7 @@ const Contact = () => {
             </h2>
             <div className="w-24 h-1 bg-yellow-500 mx-auto mb-8"></div>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Terletak di kota bekasi jawabarat, cak joe dapat diakses dengan mudah melalui 
+              Terletak di kota bekasi jawabarat, cak jo dapat diakses dengan mudah melalui 
  dan siap menyambut Anda untuk pengalaman bersantap yang luar biasa.
             </p>
           </div>
